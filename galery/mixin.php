@@ -1,0 +1,18 @@
+<?php
+    define("ROOT", "http://localhost/practice/galery");
+    define("ROOT_LIB_CSS", "http://localhost/practice/css");
+    define("ROOT_LIB", "http://localhost/practice/lib");
+    define("DB_HOST", "192.168.1.9:3306");
+    define("DB_NAME", "mydb");
+    define("DB_USER", "mingchung");
+    define("DB_PASSWORD", "admin");
+
+    function connectDB() {
+        try {
+            $connection = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASSWORD);
+            return $connection;
+        } catch(PDOException $err) {
+            return false;
+        }
+    }
+?>

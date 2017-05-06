@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic");
+
+body {
+    background-color: #e9e9e9;
+    color: #2e2e2e;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    margin: auto;
+}
+
+.container h1 {
+    margin: 1.2rem 0;
+    color: #ce7f08;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container .article-content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container .article-content ul li {
+    padding: 1rem 0;
+    border-bottom: 1px solid #c8c8c8;
+}
+
+.container .article-content ul li p {
+    margin: 0;
+}
+
+.container .pagination-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.container .pagination-content ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container .pagination-content ul li:not(:last-child) {
+    margin-right: 0.8rem;
+}
+
+.container .pagination-content ul li a {
+    display: block;
+    padding: 1rem 1.5rem;
+    background-color: #424242;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.container .pagination-content ul li a:hover {
+    background-color: #3299bb;
+}
+
+.container .pagination-content ul li.active a {
+    background-color: #ce7f08;
+}
+
+.container .pagination-content ul li.disabled {
+    cursor: not-allowed;
+}
+
+.container .pagination-content ul li.disabled a {
+    background-color: #c8c8c8;
+    pointer-events: none;
+}
+
+@media (max-width: 576px) {
+    .container .article-content ul li span {
+        display: none;
+    }
+
+    .container .pagination-content ul li:not(:last-child) {
+        margin-right: 0.4rem;
+    }
+
+    .container .pagination-content ul li a {
+        padding: 0.6rem 1.1rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .container .pagination-content ul li:not(:last-child) {
+        margin-right: 0.6rem;
+    }
+
+    .container .pagination-content ul li a {
+        padding: 0.8rem 1.3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        max-width: 992px;
+    }
+}

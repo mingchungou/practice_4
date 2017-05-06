@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic");
+
+body {
+    background-color: #232931;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+}
+
+/************** Main content styles *****************/
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/************** Header styles *****************/
+.main-content header .container {
+    padding-top: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.main-content header .container hr {
+    position: relative;
+    border-top: 2px solid #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #888888;
+}
+
+/************** Footer styles *****************/
+.main-content footer {
+    margin-top: auto;
+    background-color: #111111;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.main-content footer .container p {
+    margin: 0;
+    padding: 1rem 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+/************** Navigation button styles *****************/
+.navigation-btn {
+    padding: 0.5rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.navigation-btn:hover {
+    border-color: #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/************** Pagination content styles *****************/
+.pagination-content .container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/************** Galery - image list content styles *****************/
+.galery-content .imagelist-content .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.galery-content .imagelist-content .container .thumb {
+    margin: 1rem;
+    max-width: 220px;
+    max-height: 220px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    transition: all 0.2s ease;
+}
+
+.galery-content .imagelist-content .container .thumb:hover {
+    outline: 6px solid #ffffff;
+}
+
+.galery-content .imagelist-content .container .thumb img {
+    max-width: 220px;
+    max-height: 220px;
+}
+
+/************** Galery - pagination content styles *****************/
+.galery-content .pagination-content .container.only-next {
+    justify-content: flex-end;
+}
+
+.galery-content .pagination-content .container.both {
+    justify-content: space-between;
+}
+
+.galery-content .pagination-content .container.only-prev {
+    justify-content: flex-start;
+}
+
+/************** Image - photo content styles *****************/
+.image-content .photo-content .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.image-content .photo-content .container .photo {
+    max-width: 500px;
+    text-align: center;
+}
+
+.image-content .photo-content .container .photo img {
+    max-width: 500px;
+    max-height: 500px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/************** Upload - form content styles *****************/
+.upload-content .form-content .container form {
+    margin: 1rem auto 2rem;
+    max-width: 500px;
+}
+
+.upload-content .form-content .container form input,
+.upload-content .form-content .container form textarea {
+    border-color: #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.upload-content .form-content .container form .form-group.has-danger input,
+.upload-content .form-content .container form .form-group.has-danger textarea {
+    border-color: #d9534f;
+}
+
+.upload-content .form-content .container form input:focus,
+.upload-content .form-content .container form textarea:focus {
+    border-color: #5cb3fd;
+}
+
+.upload-content .form-content .container form .form-group:last-child .btn-primary {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    background-color: transparent;
+    transition: all 0.5s ease;
+}
+
+.upload-content .form-content .container form .form-group:last-child .btn-primary:hover {
+    border-color: #ffffff;
+}
+
+/************** Media queries *****************/
+@media (max-width: 576px) {
+    .image-content .photo-content .container .photo {
+        max-width: 100%;
+    }
+
+    .image-content .photo-content .container .photo img {
+        max-width: 100%;
+    }
+}

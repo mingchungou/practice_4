@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
+
+body {
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    background-color: #ebebeb;
+    color: #111111;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-content main .container > :first-child {
+    margin-top: 5.2rem !important;
+}
+
+.main-content .form-content .container form .form-group:last-child {
+    margin-bottom: 0;
+}
+
+/************** Header styles *****************/
+.main-content header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.6rem 0;
+    background-color: #bb1f35;
+    color: #ffffff;
+    z-index: 99999;
+}
+
+.main-content header .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/************** Header - logo styles *****************/
+.main-content header .container .logo img {
+    width: 100px;
+}
+
+/************** Header - menu styles *****************/
+.main-content header .container .menu {
+    margin-left: auto;
+}
+
+.main-content header .container .menu ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-content header .container .menu ul li a {
+    margin-left: 1.2rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.main-content header .container .menu ul li a:hover {
+    color: #111111;
+}
+
+.main-content header .container .menu ul li a .fa {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/************** Header - search styles *****************/
+.main-content header .container .search {
+    flex: 1 1 100%;
+}
+
+.main-content header .container .search div {
+    display: flex;
+    margin-top: 0.8rem;
+    transition: all 0.5s ease;
+}
+
+.main-content header .container .search div input[type="text"] {
+    flex: 1 1 auto;
+    padding: 0 0.5rem;
+    border-radius: 5px 0 0 5px;
+}
+
+.main-content header .container .search div input[type="text"]:focus {
+    outline: 0;
+}
+
+.main-content header .container .search div .hidden-md-up {
+    flex: 0 1 auto;
+    margin-left: 0.4rem;
+    border-radius:  0 5px 5px 0;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.main-content header .container .search div .hidden-md-up:hover {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/************** Blogs content styles *****************/
+.main-content .blogs-content .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content .blogs-content .container .first-item {
+    max-width: 850px;
+    width: 100%;
+}
+
+.main-content .blogs-content .container .first-item h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.main-content .blogs-content .container .blog-item {
+    margin-top: 15px;
+    padding: 1.5rem;
+    max-width: 850px;
+    width: 100%;
+    border-radius: 2px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+.main-content .blogs-content .container .blog-item .title {
+    color: #111111;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.main-content .blogs-content .container .blog-item .date {
+    color: #a4a4a4;
+}
+
+.main-content .blogs-content .container .blog-item .thumb img {
+    width: 100%;
+}
+
+.main-content .blogs-content .container .blog-item .date,
+.main-content .blogs-content .container .blog-item .thumb,
+.main-content .blogs-content .container .blog-item .extract {
+    margin-bottom: 0.8rem;
+}
+
+.main-content .blogs-content .container .blog-item .extra {
+    color: #a4a4a4;
+    font-size: 15px;
+}
+
+.main-content .blogs-content .container .blog-item .extra:hover {
+    text-decoration: underline;
+}
+
+/************** Pagination content styles *****************/
+.main-content .pagination-content {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.main-content .pagination-content ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-content .pagination-content ul li:not(:last-child) {
+    margin-right: 0.8rem;
+}
+
+.main-content .pagination-content ul li a {
+    display: block;
+    padding: 1rem 1.5rem;
+    background-color: #424242;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.main-content .pagination-content ul li a:hover {
+    background-color: #3299bb;
+    color: #ffffff;
+}
+
+.main-content .pagination-content ul li.active a {
+    background-color: #bb1f35;
+}
+
+.main-content .pagination-content ul li.disabled {
+    cursor: not-allowed;
+}
+
+.main-content .pagination-content ul li.disabled a {
+    background-color: #c8c8c8;
+    pointer-events: none;
+}
+
+/************** Footer styles *****************/
+.main-content footer {
+    margin-top: auto;
+    background-color: #bb1f35;;
+    color: #a4a4a4;
+}
+
+.main-content footer .container p {
+    margin: 0;
+    padding: 1rem 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+/************** Single - blog content styles *****************/
+.single-content .blogs-content .container {
+    margin-bottom: 1.5rem;
+}
+
+/************** Error content styles *****************/
+.error-content .info-content {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(#d8d8d8, #a4a4a4, #6e6e6e);
+}
+
+.error-content .info-content .container img {
+    margin-top: 0 !important;
+    width: 200px;
+}
+
+/************** Login - form content styles *****************/
+.login-content .form-content {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-content .form-content .container {
+    padding: 1rem;
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+}
+
+.login-content .form-content .container h1 {
+    margin-top: 0 !important;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.login-content .form-content .container form .form-group .form-data {
+    display: flex;
+}
+
+.login-content .form-content .container form .form-group .form-data .fa {
+    padding: 1rem;
+    width: 48px;
+    background-color: #c8c8c8;
+    color: #6b6b6b;
+    text-align: center;
+}
+
+.login-content .form-content .container form .form-group .form-data .fa.left-icon {
+    margin-right: 0.3rem;
+    border-radius: .25rem 0 0 .25rem;
+}
+
+.login-content .form-content .container form .form-group .form-data .fa.right-icon {
+    margin-left: 0.3rem;
+    border-radius: 0 .25rem .25rem 0;
+    background-color: #bb1f35;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.login-content .form-content .container form .form-group .form-data .form-control {
+    border-radius: 0 .25rem .25rem 0;
+}
+
+.login-content .form-content .container form .form-group:last-child .form-data .form-control {
+    border-radius: 0;
+}
+
+.login-content .form-content .container form .form-group .form-data .form-control:focus {
+    border-color: #5cb3fd;
+}
+
+.login-content .form-content .container form .form-group.has-danger .form-data .form-control {
+    border-color: #d9534f;
+}
+
+.login-content .form-content .container form .form-group .form-control-feedback {
+    margin-left: 3.5rem;
+}
+
+/************** Admin - panel content styles *****************/
+.panel-content .blogs-content .container .options {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.panel-content .blogs-content .container .options a {
+    color: #a4a4a4;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.panel-content .blogs-content .container .options a:not(:first-child) {
+    margin-left: 2rem;
+}
+
+.panel-content .blogs-content .container .options a:hover {
+    color: #111111;
+}
+
+.panel-content .blogs-content .container article:nth-child(2) {
+    margin-top: 0.4rem;
+}
+
+.panel-content .blogs-content .container .blog-item .extra {
+    margin-left: 2.5rem;
+}
+
+/************** Add - form content styles *****************/
+.add-content .form-content .container {
+    padding: 0 1.5rem 1.5rem;
+    max-width: 992px;
+    width: 100%;
+}
+
+.add-content .form-content .container h2 {
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 2px 4px 5px #a4a4a1;
+}
+
+.add-content .form-content .container form {
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.add-content .form-content .container form .form-group textarea {
+    min-height: 300px;
+}
+
+.add-content .form-content .container form .form-group .btn-primary {
+    border-color: #bb1f35;
+    background-color: #bb1f35;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.add-content .form-content .container form .form-group .btn-primary:hover {
+    border-color: #93192a;
+    background-color: #93192a;
+}
+
+/************** Media queries styles *****************/
+@media (max-width: 576px) {
+    /************** Blogs content styles *****************/
+    .main-content .blogs-content .container .first-item {
+        padding: 0 0.9rem;
+    }
+
+    .main-content .blogs-content .container .blog-item {
+        padding: 0.9rem;
+    }
+
+    /************** Pagination content styles *****************/
+    .main-content .pagination-content ul li:not(:last-child) {
+        margin-right: 0.4rem;
+    }
+
+    .main-content .pagination-content ul li a {
+        padding: 0.6rem 1.1rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    /************** Blogs content styles *****************/
+    .main-content .blogs-content .container .first-item {
+        padding: 0 1.2rem;
+    }
+
+    .main-content .blogs-content .container .blog-item {
+        padding: 1.2rem;
+    }
+
+    /************** Pagination content styles *****************/
+    .main-content .pagination-content ul li:not(:last-child) {
+        margin-right: 0.6rem;
+    }
+
+    .main-content .pagination-content ul li a {
+        padding: 0.8rem 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /************** Blogs content styles *****************/
+    .main-content .blogs-content .container {
+        padding: 0;
+    }
+
+    .main-content .blogs-content .container .blog-item {
+        border-radius: 0;
+    }
+
+    /************** Add - form content styles *****************/
+    .add-content .form-content .container form .form-group:last-child {
+        text-align: right;
+    }
+}
+
+@media (min-width: 768px) {
+    /************** Header - logo styles *****************/
+    .main-content header .container .logo {
+        order: 0;
+    }
+
+    /************** Header - menu styles *****************/
+    .main-content header .container .menu {
+        order: 2;
+        margin-left: 0;
+    }
+
+    /************** Header - search styles *****************/
+    .main-content header .container .search {
+        order: 1;
+        flex: 0 1 300px;
+        display: block;
+        margin-left: auto;
+    }
+
+    .main-content header .container .search div {
+        position: relative;
+        margin-top: 0;
+    }
+
+    .main-content header .container .search div input[type="text"] {
+        padding-right: 1.7rem;
+        border: 1px solid #a4a4a4;
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    .main-content header .container .search div input[type="text"]::-webkit-input-placeholder {
+        color: #a4a4a4;
+    }
+
+    .main-content header .container .search div .fa-search {
+        position: absolute;
+        top: 0.1rem;
+        right: 0.1rem;
+        border: 0;
+        background-color: transparent;
+        color: #a4a4a4;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+
+    .main-content header .container .search div .fa-search:hover {
+        color: #111111;
+    }
+}
+
+@media (max-width: 992px) {
+    /************** Blogs content styles *****************/
+    .main-content .blogs-content .container {
+        margin: 0;
+        width: 100%;
+    }
+
+    /************** Single - blog content styles *****************/
+    .single-content .blogs-content .container {
+        margin-bottom: 1.5rem;
+    }
+}

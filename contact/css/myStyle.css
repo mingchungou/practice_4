@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.form-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    height: 100vh;
+    margin: auto;
+}
+
+.form-content form {
+    padding: 1.2rem;
+    width: 100%;
+    border-top: 4px solid #536dfe;
+    box-shadow: 4px 4px 8px #8c8888;
+    background-color: #ffffff;
+}
+
+.form-content form textarea {
+    resize: vertical;
+}
+
+.form-content form .btn-primary {
+    cursor: pointer;
+}
