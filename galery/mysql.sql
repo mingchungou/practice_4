@@ -8,5 +8,5 @@ create table image (
     photo varchar(255),
     title varchar(255),
     description text,
-    primary key (id);
+    primary key (id)
 );

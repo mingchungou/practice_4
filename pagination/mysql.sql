@@ -6,7 +6,7 @@ use mydb;
 create table pagination (
     id int auto_increment,
     article text not null,
-    primary key (id);
+    primary key (id)
 );
 
 
