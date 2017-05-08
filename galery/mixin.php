@@ -12,7 +12,12 @@
             $connection = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASSWORD);
             return $connection;
         } catch(PDOException $err) {
-            return false;
+            if (function_exists("http_response_code")) {
+                http_response_code(500);
+            } else {
+                header("HTTP/1.1 500 Internal Server Error");
+            }
+            die("Error: " . $err->getMessage());
         }
     }
 ?>

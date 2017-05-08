@@ -1,9 +1,7 @@
 <?php
     require "../config.php";
 
-    //Connect to db
-    $dbConnection = connectDB();
-    checkConnection($dbConnection);
+    $dbConnection = connectDB(); //Connect to db
 
     if ($_SERVER["REQUEST_METHOD"] !== "GET" || empty($_GET["info"])) {
         setcookie("error_message", "No se encontró dato 'info' dentro del url");

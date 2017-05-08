@@ -1,13 +1,7 @@
 <?php
     require "mixin.php";
 
-    //Connect to db
-    $connection = connectDB("mydb", "mingchung", "admin");
-
-    if (!$connection) {
-        die();
-    }
-
+    $connection = connectDB("mydb", "mingchung", "admin"); //Connect to db
     $photoPerPage = 4; //Set number of images per page
     $page = isset($_GET["page"]) ? (int)$_GET["page"] : 1; //Set current page number
     $init = ($page > 1) ? ($page * $photoPerPage) - $photoPerPage : 0; //Set from which position we want to get the articles

@@ -5,8 +5,12 @@
     try {
         $connection = new PDO("mysql:host=$IP_Address:3306;dbname=mydb;", "mingchung", "admin");
     } catch(PDOException $e) {
-        echo "Error: " . $e->getMessage() . "<br />";
-        die();
+        if (function_exists("http_response_code")) {
+            http_response_code(500);
+        } else {
+            header("HTTP/1.1 500 Internal Server Error");
+        }
+        die("Error: " . $e->getMessage());
     }
 
     $page = isset($_GET["page"]) ? (int)$_GET["page"] : 1; //Set current page
@@ -19,7 +23,12 @@
     $articles = $statement->fetchAll();
 
     if (!$articles) {
-        header("location: index.php");
+        if (function_exists("http_response_code")) {
+            http_response_code(500);
+        } else {
+            header("HTTP/1.1 500 Internal Server Error");
+        }
+        die("Error: Not found any blog within that page");
     }
 
     //Get the quantity of articles
@@ -29,14 +38,9 @@
     //Calculate the quantity of pages
     $numberPages = (int)ceil($totalArticles / $postPerPage);
 
-    //Get pages to show
-    if ($page !== 1 && $page !== $numberPages) {
-        $pageShow = [$page - 1, $page, $page + 1];
-    } elseif ($page === 1) {
-        $pageShow = [$page, $page + 1, $page + 2];
-    } elseif ($page === $numberPages) {
-        $pageShow = [$page - 2, $page - 1, $page];
-    }
+    //Determine if possible to show previous and next page number buttons
+    $previousPage = (($page - 1) >= 1) ? $page - 1 : -1;
+    $nextPage = (($page + 1) <= $numberPages) ? $page + 1 : -1;
 
     require "views/index.view.php";
 ?>

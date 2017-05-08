@@ -1,10 +1,7 @@
 <?php
     require "../config.php";
 
-    //Connect to db
-    $dbConnection = connectDB();
-    checkConnection($dbConnection);
-
+    $dbConnection = connectDB(); //Connect to db
     $blogID = (int)clearInputData($_GET["id"]); //Clear id data gotten from url
     $blog = getBlogByID($dbConnection, $blogID); //Get blog by id
 

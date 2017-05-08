@@ -4,14 +4,7 @@
 
     checkSession(false);
 
-    //Connect to db
-    $dbConnection = connectDB();
-
-    if (!$dbConnection) {
-        echo "Error, no se pudo conectarse con la base de datos";
-        die();
-    }
-
+    $dbConnection = connectDB(); //Connect to db
     $errors = ["name" => "", "password" => "", "confirm" => ""];
     $username = "";
     $password = "";

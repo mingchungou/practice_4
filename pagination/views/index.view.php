@@ -27,38 +27,38 @@
             </div>
 
             <!-- Create pagination -->
-            <div class="pagination-content">
-                <ul>
+            <nav class="pagination-content">
+                <ul class="pagination pagination-lg">
                     <!-- Set previous button -->
                     <?php if ($page == 1): ?>
-                    <li class="disabled"><a href="#">
+                    <li class="disabled page-item"><a class="page-link" href="#">
                     <?php else: ?>
-                    <li><a href="?page=<?php echo $page - 1; ?>">
+                    <li class="page-item"><a class="page-link" href="?page=<?php echo $page - 1; ?>">
                     <?php endif; ?>
                         <i class="fa fa-angle-double-left" aria-hidden="true"></i>
                     </a></li>
 
-                    <!-- Set page buttons -->
-                    <?php
-                        for ($i = 0; $i < count($pageShow); $i++) {
-                            if ($page === $pageShow[$i]) {
-                                echo "<li class='active'><a href='?page=$pageShow[$i]'>$pageShow[$i]</a></li>";
-                            } else {
-                                echo "<li><a href='?page=$pageShow[$i]'>$pageShow[$i]</a></li>";
-                            }
-                        }
-                    ?>
+                    <!-- Create page number buttons, maximum numbers to show are three -->
+                    <?php if ($previousPage !== -1): ?>
+                        <li class="page-item"><a class="page-link" href="<?php echo "?page=" . $previousPage; ?>"><?php echo $previousPage; ?></a></li>
+                    <?php endif; ?>
+
+                    <li class="active page-item"><a class="page-link"><?php echo $page; ?></a></li>
+
+                    <?php if ($nextPage !== -1): ?>
+                        <li class="page-item"><a class="page-link" href="<?php echo "?page=" . $nextPage; ?>"><?php echo $nextPage; ?></a></li>
+                    <?php endif; ?>
 
                     <!-- Set next button -->
                     <?php if ($page == $numberPages): ?>
-                    <li class="disabled"><a href="#">
+                    <li class="disabled page-item"><a class="page-link" href="#">
                     <?php else: ?>
-                    <li><a href="?page=<?php echo $page + 1; ?>">
+                    <li class="page-item"><a class="page-link" href="?page=<?php echo $page + 1; ?>">
                     <?php endif; ?>
                         <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                     </a></li>
                 </ul>
-            </div>
+            </nav>
         </section>
 
         <script src="../lib/jquery-3.2.0.min.js"></script>

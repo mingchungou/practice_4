@@ -1,13 +1,7 @@
 <?php
     require "../mixin.php";
 
-    //Connect to db
-    $connection = connectDB("mydb", "mingchung", "admin");
-
-    if (!$connection) {
-        die();
-    }
-
+    $connection = connectDB("mydb", "mingchung", "admin"); //Connect to db
     $id = isset($_GET["id"]) ? (int)$_GET["id"] : false; //Clear id data gotten from url
     $page = isset($_GET["page"]) ? (int)$_GET["page"] : 1; //Clear page data gotten from url
 

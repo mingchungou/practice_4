@@ -10,10 +10,7 @@
     $text = "";
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        //Connect to db
-        $dbConnection = connectDB();
-        checkConnection($dbConnection);
-
+        $dbConnection = connectDB(); //Connect to db
         $title = clearInputData($_POST["title"]);
         $extract = clearInputData($_POST["extract"]);
         $text = $_POST["text"];

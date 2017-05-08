@@ -4,10 +4,7 @@
 
     checkSession(); //Check if start session
 
-    //Connect to db
-    $dbConnection = connectDB();
-    checkConnection($dbConnection);
-
+    $dbConnection = connectDB(); //Connect to db
     $blogID = (int)clearInputData($_GET["id"]); //Clear id data gotten from url
 
     if (!$blogID) {

@@ -1,13 +1,7 @@
 <?php
     require "../mixin.php";
 
-    //Connect to db
-    $connection = connectDB("mydb", "mingchung", "admin");
-
-    if (!$connection) {
-        die();
-    }
-
+    $connection = connectDB("mydb", "mingchung", "admin"); //Connect to db
     $errors = ["photo" => "", "title" => "", "description" => ""];
     $title = "";
     $description = "";

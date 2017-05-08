@@ -39,42 +39,8 @@ body {
     margin-top: 1rem;
 }
 
-.container .pagination-content ul {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.container .pagination-content ul li:not(:last-child) {
-    margin-right: 0.8rem;
-}
-
-.container .pagination-content ul li a {
-    display: block;
-    padding: 1rem 1.5rem;
-    background-color: #424242;
-    color: #ffffff;
-    text-decoration: none;
+.container .pagination-content .pagination-lg .page-link {
     transition: all 0.5s ease;
-}
-
-.container .pagination-content ul li a:hover {
-    background-color: #3299bb;
-}
-
-.container .pagination-content ul li.active a {
-    background-color: #ce7f08;
-}
-
-.container .pagination-content ul li.disabled {
-    cursor: not-allowed;
-}
-
-.container .pagination-content ul li.disabled a {
-    background-color: #c8c8c8;
-    pointer-events: none;
 }
 
 @media (max-width: 576px) {
@@ -82,22 +48,16 @@ body {
         display: none;
     }
 
-    .container .pagination-content ul li:not(:last-child) {
-        margin-right: 0.4rem;
-    }
-
-    .container .pagination-content ul li a {
-        padding: 0.6rem 1.1rem;
+    .container .pagination-content .pagination-lg .page-link {
+        padding: .6rem 1.35rem;
+        font-size: 1rem;
     }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
-    .container .pagination-content ul li:not(:last-child) {
-        margin-right: 0.6rem;
-    }
-
-    .container .pagination-content ul li a {
-        padding: 0.8rem 1.3rem;
+    .container .pagination-content .pagination-lg .page-link {
+        padding: .7rem 1.45rem;
+        font-size: 1.1rem;
     }
 }
 

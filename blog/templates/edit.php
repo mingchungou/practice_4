@@ -4,10 +4,7 @@
 
     checkSession(); //Check if start session
 
-    //Connect to db
-    $dbConnection = connectDB();
-    checkConnection($dbConnection);
-
+    $dbConnection = connectDB(); //Connect to db
     $errors = ["title" => "", "extract" => "", "text" => "", "thumb" => ""];
     $id = "";
     $title = "";

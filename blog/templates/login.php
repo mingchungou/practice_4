@@ -12,10 +12,7 @@
     $password = "";
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        //Connect to db
-        $dbConnection = connectDB();
-        checkConnection($dbConnection);
-
+        $dbConnection = connectDB(); //Connect to db
         $username = clearInputData($_POST["name"]);
         $password = $_POST["password"];
 
