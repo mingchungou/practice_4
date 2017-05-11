@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-        <link rel="stylesheet" href="../css/bootstrap.min.css"  />
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/myStyle.css">
     </head>
     <body>
@@ -50,7 +50,7 @@
                         <div class="col-sm-8 offset-sm-4 form-control-feedback"><?php echo $errors["message"]; ?></div>
                         <?php endif; ?>
                     </div>
-                    
+
                     <div class="form-group row">
                         <div class="col-sm-8 offset-sm-4">
                             <button type="submit" class="btn btn-primary" name="submit">Enviar</button>

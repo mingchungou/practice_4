@@ -7,7 +7,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
         <link rel="stylesheet" href="../css/font-awesome.min.css" />
-        <link rel="stylesheet" href="../css/bootstrap.min.css"  />
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/myStyle.css" />
     </head>
     <body>

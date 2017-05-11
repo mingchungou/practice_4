@@ -7,7 +7,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
         <link rel="stylesheet" href="<?php echo ROOT_LIB_CSS; ?>/font-awesome.min.css" />
-        <link rel="stylesheet" href="<?php echo ROOT_LIB_CSS; ?>/bootstrap.min.css"  />
+        <link rel="stylesheet" href="<?php echo ROOT_LIB_CSS; ?>/bootstrap.min.css" />
         <link rel="stylesheet" href="<?php echo ROOT; ?>/css/myStyle.css" />
     </head>
     <body>
