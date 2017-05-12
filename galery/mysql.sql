@@ -3,6 +3,7 @@ use mydb;
 
 
 /******** Table image *********/
+drop table if exists image;
 create table image (
     id int auto_increment,
     photo varchar(255),
@@ -10,3 +11,7 @@ create table image (
     description text,
     primary key (id)
 );
+
+truncate image;
+select * from image;
+describe image;

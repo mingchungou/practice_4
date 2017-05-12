@@ -3,6 +3,7 @@ use mydb;
 
 
 /******** Table blog *********/
+drop table if exists blog;
 create table blog (
     id int auto_increment,
     title varchar(255) not null,
@@ -12,3 +13,7 @@ create table blog (
     text text not null,
     primary key (id)
 );
+
+truncate blog;
+select * from blog;
+describe blog;
