@@ -19,7 +19,9 @@
                 <ul>
                     <?php foreach ($articles as $article): ?>
                         <li class="row">
-                            <span class="col-sm-1"><strong><?php echo $article["id"] . ".- "; ?></strong></span>
+                            <span class="col-sm-1">
+                                <strong><?php echo $article["id"] . ".- "; ?></strong>
+                            </span>
                             <p class="col-sm-11"><?php echo $article["article"]; ?></p>
                         </li>
                     <?php endforeach; ?>
@@ -40,13 +42,21 @@
 
                     <!-- Create page number buttons, maximum numbers to show are three -->
                     <?php if ($previousPage !== -1): ?>
-                        <li class="page-item"><a class="page-link" href="<?php echo "?page=" . $previousPage; ?>"><?php echo $previousPage; ?></a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="<?php echo "?page=" . $previousPage; ?>">
+                                <?php echo $previousPage; ?>
+                            </a>
+                        </li>
                     <?php endif; ?>
 
                     <li class="active page-item"><a class="page-link"><?php echo $page; ?></a></li>
 
                     <?php if ($nextPage !== -1): ?>
-                        <li class="page-item"><a class="page-link" href="<?php echo "?page=" . $nextPage; ?>"><?php echo $nextPage; ?></a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="<?php echo "?page=" . $nextPage; ?>">
+                                <?php echo $nextPage; ?>
+                            </a>
+                        </li>
                     <?php endif; ?>
 
                     <!-- Set next button -->

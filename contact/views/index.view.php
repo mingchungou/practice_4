@@ -22,7 +22,11 @@
                     <div class="form-group row <?php echo empty($errors["name"]) ? "" : "has-danger"; ?>">
                         <label for="name" class="col-sm-4 form-control-label">Nombre</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control form-control-danger" id="name" name="name" placeholder="Ingrese su nombre" value="<?php if (!$sent && isset($name)) echo $name; ?>" />
+                            <input class="form-control form-control-danger"
+                                id="name" name="name"
+                                type="text"
+                                placeholder="Ingrese su nombre"
+                                value="<?php if (!$sent && isset($name)) echo $name; ?>" />
                         </div>
                         <?php if (!empty($errors["name"])): ?>
                         <div class="col-sm-8 offset-sm-4 form-control-feedback"><?php echo $errors["name"]; ?></div>
@@ -33,7 +37,11 @@
                     <div class="form-group row <?php echo empty($errors["email"]) ? "" : "has-danger"; ?>">
                         <label for="email" class="col-sm-4 form-control-label">Correo</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control form-control-danger" id="email" name="email" placeholder="Ingrese su correo" value="<?php if (!$sent && isset($email)) echo $email; ?>" />
+                            <input class="form-control form-control-danger"
+                                id="email" name="email"
+                                type="text"
+                                placeholder="Ingrese su correo"
+                                value="<?php if (!$sent && isset($email)) echo $email; ?>" />
                         </div>
                         <?php if (!empty($errors["email"])): ?>
                         <div class="col-sm-8 offset-sm-4 form-control-feedback"><?php echo $errors["email"]; ?></div>
@@ -44,7 +52,11 @@
                     <div class="form-group row <?php echo empty($errors["message"]) ? "" : "has-danger"; ?>">
                         <label for="message" class="col-sm-4 form-control-label">Message</label>
                         <div class="col-sm-8">
-                            <textarea class="form-control form-control-danger" id="message" name="message" rows="3" placeholder="Ingrese su mensaje"><?php if (!$sent && isset($message)) echo $message; ?></textarea>
+                            <textarea class="form-control form-control-danger"
+                                id="message"
+                                name="message"
+                                rows="3"
+                                placeholder="Ingrese su mensaje"><?php if (!$sent && isset($message)) echo $message; ?></textarea>
                         </div>
                         <?php if (!empty($errors["message"])): ?>
                         <div class="col-sm-8 offset-sm-4 form-control-feedback"><?php echo $errors["message"]; ?></div>

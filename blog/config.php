@@ -1,8 +1,8 @@
 <?php
-    define("ROOT", "http://localhost/practice_4/blog");
-    define("ROOT_LIB_CSS", "http://localhost/practice_4/css");
-    define("ROOT_LIB", "http://localhost/practice_4/lib");
-    define("DB_HOST", "192.168.1.9:3306");
+    define("ROOT", "http://localhost/practice/practice_4/blog");
+    define("ROOT_LIB_CSS", "http://localhost/practice/practice_4/css");
+    define("ROOT_LIB", "http://localhost/practice/practice_4/lib");
+    define("DB_HOST", "192.168.1.6:3306");
     define("DB_NAME", "mydb");
     define("DB_USER", "mingchung");
     define("DB_PASSWORD", "admin");

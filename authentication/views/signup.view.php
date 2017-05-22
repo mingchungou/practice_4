@@ -16,12 +16,20 @@
                 <h1>Regístrate</h1>
                 <hr />
                 <article>
-                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" name="signup">
+                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"
+                        method="POST"
+                        name="signup">
+
                         <!-- Name input -->
                         <div class="form-group <?php echo empty($errors["name"]) ? "" : "has-danger"; ?>">
                             <div class="form-data">
                                 <i class="fa fa-user left-icon" aria-hidden="true"></i>
-                                <input type="text" class="form-control form-control-danger" id="name" name="name" placeholder="Usuario" value="<?php echo $username; ?>" />
+                                <input class="form-control form-control-danger"
+                                    id="name"
+                                    type="text"
+                                    name="name"
+                                    placeholder="Usuario"
+                                    value="<?php echo $username; ?>" />
                             </div>
                             <?php if (!empty($errors["name"])): ?>
                             <div class="form-control-feedback"><?php echo $errors["name"]; ?></div>
@@ -32,7 +40,12 @@
                         <div class="form-group <?php echo empty($errors["password"]) ? "" : "has-danger"; ?>">
                             <div class="form-data">
                                 <i class="fa fa-lock left-icon" aria-hidden="true"></i>
-                                <input type="password" class="form-control form-control-danger" id="password" name="password" placeholder="Contraseña" value="<?php echo $password; ?>" />
+                                <input class="form-control form-control-danger"
+                                    id="password"
+                                    type="password"
+                                    name="password"
+                                    placeholder="Contraseña"
+                                    value="<?php echo $password; ?>" />
                             </div>
                             <?php if (!empty($errors["password"])): ?>
                             <div class="form-control-feedback"><?php echo $errors["password"]; ?></div>
@@ -43,8 +56,16 @@
                         <div class="form-group <?php echo empty($errors["confirm"]) ? "" : "has-danger"; ?>">
                             <div class="form-data">
                                 <i class="fa fa-lock left-icon" aria-hidden="true"></i>
-                                <input type="password" class="form-control form-control-danger" id="confirm" name="confirm" placeholder="Reescribir contraseña" value="<?php echo $confirm; ?>"/>
-                                <i class="fa fa-arrow-right right-icon" aria-hidden="true" onclick="signup.submit()"></i>
+                                <input class="form-control form-control-danger"
+                                    id="confirm"
+                                    type="password"
+                                    name="confirm"
+                                    placeholder="Reescribir contraseña"
+                                    value="<?php echo $confirm; ?>"/>
+                                <i class="fa fa-arrow-right right-icon"
+                                    aria-hidden="true"
+                                    onclick="signup.submit()">
+                                </i>
                             </div>
                             <?php if (!empty($errors["confirm"])): ?>
                             <div class="form-control-feedback"><?php echo $errors["confirm"]; ?></div>

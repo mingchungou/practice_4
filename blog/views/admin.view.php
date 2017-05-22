@@ -21,16 +21,29 @@
                     <article class="first-item">
                         <h1 class="mb-3">Panel de Control</h1>
                         <div class="options">
-                            <a href="<?php echo ROOT . "/templates/add.php"; ?>">Agregar <i class="fa fa-plus" aria-hidden="true"></i></a>
-                            <a href="<?php echo ROOT . "/templates/closeSession.php"; ?>">Cerrar sesión <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                            <a href="<?php echo ROOT . "/templates/add.php"; ?>">
+                                Agregar <i class="fa fa-plus" aria-hidden="true"></i>
+                            </a>
+                            <a href="<?php echo ROOT . "/templates/closeSession.php"; ?>">
+                                Cerrar sesión <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            </a>
                         </div>
                     </article>
                     <?php foreach ($blogs as $blog):?>
                     <article class="blog-item">
                         <h2 class="title mb-3"><?php echo $blog["title"]; ?></h2>
-                        <a class="extra" href="<?php echo ROOT . "/templates/edit.php?id=" . $blog["id"] . "&page=" . $currentPage; ?>">Editar</a>
-                        <a class="extra" href="<?php echo ROOT . "/templates/single.php?id=" . $blog["id"]; ?>">Ver</a>
-                        <a class="extra" href="<?php echo ROOT . "/templates/remove.php?id=" . $blog["id"]; ?>">Borrar</a>
+                        <a class="extra"
+                            href="<?php echo ROOT . "/templates/edit.php?id=" . $blog["id"] . "&page=" . $currentPage; ?>">
+                            Editar
+                        </a>
+                        <a class="extra"
+                            href="<?php echo ROOT . "/templates/single.php?id=" . $blog["id"]; ?>">
+                            Ver
+                        </a>
+                        <a class="extra"
+                            href="<?php echo ROOT . "/templates/remove.php?id=" . $blog["id"]; ?>">
+                            Borrar
+                        </a>
                     </article>
                     <?php endforeach; ?>
                 </div>

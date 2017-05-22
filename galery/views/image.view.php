@@ -32,7 +32,9 @@
             <!-- Create pagination -->
             <div class="pagination-content">
                 <div class="container">
-                    <a class="navigation-btn" href="<?php echo ROOT . "/index.php?page=$page"; ?>"><i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar</a>
+                    <a class="navigation-btn" href="<?php echo ROOT . "/index.php?page=$page"; ?>">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar
+                    </a>
                 </div>
             </div>
 

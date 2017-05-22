@@ -35,14 +35,22 @@
             <div class="pagination-content">
                 <?php if ($page === 1 && $numberPages > 1): ?>
                 <div class="container only-next">
-                    <a class="navigation-btn" href="<?php echo ROOT . "/index.php?page=" . $nextPage; ?>">Siguiente <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    <a class="navigation-btn" href="<?php echo ROOT . "/index.php?page=" . $nextPage; ?>">
+                        Siguiente <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
                 <?php elseif ($page > 1 && $page < $numberPages): ?>
                 <div class="container both">
-                    <a class="navigation-btn" href="<?php echo ROOT . "/index.php?page=" . $previousPage; ?>"><i class="fa fa-arrow-left" aria-hidden="true"></i> Anterior</a>
-                    <a class="navigation-btn" href="<?php echo ROOT . "/index.php?page=" . $nextPage; ?>">Siguiente <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    <a class="navigation-btn" href="<?php echo ROOT . "/index.php?page=" . $previousPage; ?>">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i> Anterior
+                    </a>
+                    <a class="navigation-btn" href="<?php echo ROOT . "/index.php?page=" . $nextPage; ?>">
+                        Siguiente <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
                 <?php elseif ($page === $numberPages && $numberPages !== 1): ?>
                 <div class="container only-prev">
-                    <a class="navigation-btn" href="<?php echo ROOT . "/index.php?page=" . $previousPage; ?>"><i class="fa fa-arrow-left" aria-hidden="true"></i> Anterior</a>
+                    <a class="navigation-btn" href="<?php echo ROOT . "/index.php?page=" . $previousPage; ?>">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i> Anterior
+                    </a>
                 <?php endif; ?>
                 </div>
             </div>

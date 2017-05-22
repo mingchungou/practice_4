@@ -20,12 +20,17 @@
 
             <main class="form-content">
                 <div class="container">
-                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" enctype="multipart/form-data">
+                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"
+                        method="POST"
+                        enctype="multipart/form-data">
                         <!-- Image file input -->
                         <div class="form-group row <?php echo empty($errors["photo"]) ? "" : "has-danger"; ?>">
                             <label for="photo" class="col-12 form-control-label">Seleccione tu foto:</label>
                             <div class="col-12">
-                                <input type="file" class="form-control form-control-danger" id="photo" name="photo" />
+                                <input type="file"
+                                    class="form-control form-control-danger"
+                                    id="photo"
+                                    name="photo" />
                             </div>
                             <?php if (!empty($errors["photo"])): ?>
                             <div class="col-12 form-control-feedback"><?php echo $errors["photo"]; ?></div>
@@ -36,7 +41,11 @@
                         <div class="form-group row <?php echo empty($errors["title"]) ? "" : "has-danger"; ?>">
                             <label for="title" class="col-12 form-control-label">Título de la foto:</label>
                             <div class="col-12">
-                                <input type="text" class="form-control form-control-danger" id="title" name="title" placeholder="Ingrese un título" value="<?php echo $title; ?>" />
+                                <input class="form-control form-control-danger"
+                                    id="title" name="title"
+                                    type="text"
+                                    placeholder="Ingrese un título"
+                                    value="<?php echo $title; ?>" />
                             </div>
                             <?php if (!empty($errors["title"])): ?>
                             <div class="col-12 form-control-feedback"><?php echo $errors["title"]; ?></div>
@@ -47,7 +56,11 @@
                         <div class="form-group row <?php echo empty($errors["description"]) ? "" : "has-danger"; ?>">
                             <label for="description" class="col-12 form-control-label">Descripción:</label>
                             <div class="col-12">
-                                <textarea class="form-control form-control-danger" id="description" name="description" rows="3" placeholder="Ingrese una descripción"><?php echo $description; ?></textarea>
+                                <textarea class="form-control form-control-danger"
+                                    id="description"
+                                    name="description"
+                                    rows="3"
+                                    placeholder="Ingrese una descripción"><?php echo $description; ?></textarea>
                             </div>
                             <?php if (!empty($errors["description"])): ?>
                             <div class="col-12 form-control-feedback"><?php echo $errors["description"]; ?></div>
