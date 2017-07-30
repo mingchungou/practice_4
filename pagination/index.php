@@ -15,10 +15,12 @@
 
     $page = isset($_GET["page"]) ? (int)$_GET["page"] : 1; //Set current page
     $postPerPage = 5; //Set number of articles per page
-    $init = ($page > 1) ? ($page * $postPerPage - $postPerPage) : 0; //Set from which position we want to get the articles
+    //Set from which position we want to get the articles
+    $init = ($page > 1) ? ($page * $postPerPage - $postPerPage) : 0;
 
     //Bringing the list of articles
-    $statement = $connection->prepare("select SQL_CALC_FOUND_ROWS * from pagination limit $init, $postPerPage");
+    $query = "select SQL_CALC_FOUND_ROWS * from pagination limit $init, $postPerPage";
+    $statement = $connection->prepare($query);
     $statement->execute();
     $articles = $statement->fetchAll();
 

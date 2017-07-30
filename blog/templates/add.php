@@ -36,10 +36,15 @@
         //Add new blog to db and redirect to admin page
         if (!empty($title) && !empty($extract) && !empty($text) && $checkImage) {
             $file_root = IMAGES_FILE . $_FILES["thumb"]["name"];
-            move_uploaded_file($_FILES["thumb"]["tmp_name"], $file_root); //Copy the image from somewhere and paste it to location set
+            //Copy the image from somewhere and paste it to location set
+            move_uploaded_file($_FILES["thumb"]["tmp_name"], $file_root);
 
-            $statement = $dbConnection->prepare("insert into blog (title, extract, thumb, text) values (:title, :extract, :thumb, :text)");
-            $statement->execute(array(":title" => $title, ":extract" => $extract, ":thumb" => $_FILES["thumb"]["name"], ":text" => $text));
+            $query = "insert into blog (title, extract, thumb, text) values (:title, :extract, :thumb, :text)";
+            $statement = $dbConnection->prepare($query);
+            $statement->execute(array(":title" => $title,
+                ":extract" => $extract,
+                ":thumb" => $_FILES["thumb"]["name"],
+                ":text" => $text));
             header("location: " . ROOT . "/templates/admin.php");
         }
     }

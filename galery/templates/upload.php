@@ -32,10 +32,14 @@
         if ($check and !empty($description) and !empty($title)) {
             $file_root = "../images/";
             $file_upload = $file_root . $_FILES["photo"]["name"];
-            move_uploaded_file($_FILES["photo"]["tmp_name"], $file_upload); //Copy the image from somewhere and paste it to location set
+            //Copy the image from somewhere and paste it to location set
+            move_uploaded_file($_FILES["photo"]["tmp_name"], $file_upload);
 
-            $statement = $connection->prepare("insert into image (photo, title, description) values (:photo, :title, :description)");
-            $statement->execute(array(":photo" => $_FILES["photo"]["name"], ":title" => $title, ":description" => $description));
+            $query = "insert into image (photo, title, description) values (:photo, :title, :description)";
+            $statement = $connection->prepare($query);
+            $statement->execute(array(":photo" => $_FILES["photo"]["name"],
+                ":title" => $title,
+                ":description" => $description));
 
             header("location: ../index.php");
         } else {

@@ -29,7 +29,9 @@
                                 value="<?php if (!$sent && isset($name)) echo $name; ?>" />
                         </div>
                         <?php if (!empty($errors["name"])): ?>
-                        <div class="col-sm-8 offset-sm-4 form-control-feedback"><?php echo $errors["name"]; ?></div>
+                        <div class="col-sm-8 offset-sm-4 form-control-feedback">
+                            <?php echo $errors["name"]; ?>
+                        </div>
                         <?php endif; ?>
                     </div>
 
@@ -44,7 +46,9 @@
                                 value="<?php if (!$sent && isset($email)) echo $email; ?>" />
                         </div>
                         <?php if (!empty($errors["email"])): ?>
-                        <div class="col-sm-8 offset-sm-4 form-control-feedback"><?php echo $errors["email"]; ?></div>
+                        <div class="col-sm-8 offset-sm-4 form-control-feedback">
+                            <?php echo $errors["email"]; ?>
+                        </div>
                         <?php endif; ?>
                     </div>
 
@@ -59,13 +63,17 @@
                                 placeholder="Ingrese su mensaje"><?php if (!$sent && isset($message)) echo $message; ?></textarea>
                         </div>
                         <?php if (!empty($errors["message"])): ?>
-                        <div class="col-sm-8 offset-sm-4 form-control-feedback"><?php echo $errors["message"]; ?></div>
+                        <div class="col-sm-8 offset-sm-4 form-control-feedback">
+                            <?php echo $errors["message"]; ?>
+                        </div>
                         <?php endif; ?>
                     </div>
 
                     <div class="form-group row">
                         <div class="col-sm-8 offset-sm-4">
-                            <button type="submit" class="btn btn-primary" name="submit">Enviar</button>
+                            <button type="submit" class="btn btn-primary" name="submit">
+                                Enviar
+                            </button>
                         </div>
                     </div>
                 </form>

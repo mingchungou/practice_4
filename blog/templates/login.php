@@ -25,10 +25,14 @@
             $errors["password"] = "Por favor ingresar contraseña";
         }
 
-        //Try to match a db user with these username and password, if find a match, then redirecting to admin page
+        /*
+        Try to match a db user with these username and password, if find a match, then redirecting
+        to admin page.
+        */
         if (!empty($username) and !empty($password)) {
             $passwordEncoded = hash("sha512", $password); //Encode password
-            $result = $dbConnection->prepare("select * from user where name = :name and password = :password limit 1");
+            $query = "select * from user where name = :name and password = :password limit 1";
+            $result = $dbConnection->prepare($query);
             $result->execute(array(":name" => $username, ":password" => $passwordEncoded));
             $result = $result->fetch();
 

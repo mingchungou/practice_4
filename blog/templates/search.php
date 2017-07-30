@@ -12,7 +12,8 @@
     $info = clearInputData($_GET["info"]); //Clear info data gotten from url
     $currentPage = currentPage(); //Set current page number
     $init = ($currentPage > 1) ? ($currentPage * BLOG_PER_PAGE) - BLOG_PER_PAGE : 0;
-    $statement = $dbConnection->prepare("select sql_calc_found_rows * from blog where title like :search or extract like :search limit $init, " . BLOG_PER_PAGE);
+    $query = "select sql_calc_found_rows * from blog where title like :search or extract like :search limit $init, " . BLOG_PER_PAGE;
+    $statement = $dbConnection->prepare($query);
     $statement->execute(array(":search" => "%$info%"));
     $blogs = $statement->fetchAll(); //Get blogs
 

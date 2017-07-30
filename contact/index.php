@@ -50,7 +50,8 @@
             $emailMessage .= "Email: $email\n";
             $emailMessage .= "Message: $message";
 
-            mail($sendTo, $subject, $emailMessage); //Send an email to my account, but having to upload the practice into real server
+            //Send an email to my account, but having to upload the practice into real server
+            mail($sendTo, $subject, $emailMessage);
             $sent = true;
         }
     }

@@ -38,20 +38,28 @@
         if (empty($thumb["name"])) { //If image input file is empty then use the previous one
             $thumb = $thumbStored;
         } else {
-            if (!@getimagesize($thumb["tmp_name"])) {
+            if (!getimagesize($thumb["tmp_name"])) {
                 $errors["thumb"] = "El archivo no es una imagen o es muy pesado";
                 $thumb = false;
-            } elseif (!empty($title) && !empty($extract) && !empty($text)) { //If a new image is selected, then copying it to image root file
+            } elseif (!empty($title) && !empty($extract) && !empty($text)) {
+                //If a new image is selected, then copying it to image root file
                 $file_root = IMAGES_FILE . $thumb["name"];
-                move_uploaded_file($thumb["tmp_name"], $file_root); //Copy the image from somewhere and paste it to location set
+                //Copy the image from somewhere and paste it to location set
+                move_uploaded_file($thumb["tmp_name"], $file_root);
                 $thumb = $thumb["name"];
             }
         }
 
         //Update the blog from db and redirect to admin page
         if (!empty($title) && !empty($extract) && !empty($text) && $thumb) {
-            $statement = $dbConnection->prepare("update blog set title = :title, extract = :extract, thumb = :thumb, text = :text where id = :id");
-            $statement->execute(array(":title" => $title, ":extract" => $extract, ":thumb" => $thumb, ":text" => $text, ":id" => $id));
+            $query = "update blog set title = :title, extract = :extract, thumb = :thumb, text = :text where id = :id";
+            $statement = $dbConnection->prepare($query);
+            $statement->execute(array(":title" => $title,
+                ":extract" => $extract,
+                ":thumb" => $thumb,
+                ":text" => $text,
+                ":id" => $id));
+            unlink(IMAGES_FILE . $thumbStored);
             header("location: " . ROOT . "/templates/admin.php?page=" . $page);
         }
     } else {

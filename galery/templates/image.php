@@ -10,7 +10,8 @@
     }
 
     //Get image by id gotten
-    $statement = $connection->prepare("select * from image where id = :id");
+    $query = "select * from image where id = :id";
+    $statement = $connection->prepare($query);
     $statement->execute(array(":id" => $id));
     $photo = $statement->fetch();
 

@@ -20,7 +20,8 @@
     unlink(IMAGES_FILE . $blog["thumb"]); //Remove image of block
 
     //Remove the blog from db and redirect to admin page
-    $statement = $dbConnection->prepare("delete from blog where id = :id");
+    $query = "delete from blog where id = :id";
+    $statement = $dbConnection->prepare($query);
     $statement->execute(array(":id" => $blogID));
     header("location: " . ROOT . "/templates/admin.php");
 

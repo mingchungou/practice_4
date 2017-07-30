@@ -23,7 +23,8 @@
             <main class="photo-content">
                 <div class="container">
                     <article class="photo">
-                        <img src="../images/<?php echo $photo["photo"]; ?>" alt="<?php echo $photo["title"]; ?>" />
+                        <img src="../images/<?php echo $photo["photo"]; ?>"
+                            alt="<?php echo $photo["title"]; ?>" />
                         <p class="text-center my-3"><?php echo $photo["description"]; ?></p>
                     </article>
                 </div>

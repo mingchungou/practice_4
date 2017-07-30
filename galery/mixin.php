@@ -7,6 +7,9 @@
     define("DB_USER", "mingchung");
     define("DB_PASSWORD", "admin");
 
+    /**
+     * Function for connecting to db.
+     */
     function connectDB() {
         try {
             $connection = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASSWORD);
